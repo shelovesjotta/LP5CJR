@@ -102,7 +102,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nome"/>
+        <Property name="text" type="java.lang.String" value="Nome Completo"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtEndereco">
@@ -161,7 +161,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel14">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Apelido"/>
+        <Property name="text" type="java.lang.String" value="Apelido Curto"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel18">

@@ -23,6 +23,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 
@@ -50,7 +51,7 @@ public class jDlgCjrVenda extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro de Venda");
         List lista = new ArrayList();
-        Util.habilitar(false, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario, jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
+        Util.habilitar(false, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario, jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar, jBtnIncluirProd, jBntAlterarProd, jBntExcluirProd);
         Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
         setLocationRelativeTo(null);
         cjrVenda = new CjrVenda();
@@ -395,7 +396,7 @@ public class jDlgCjrVenda extends javax.swing.JDialog {
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
         // TODO add your handling code here:
-        Util.habilitar(true, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
+        Util.habilitar(true, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar, jBtnIncluirProd, jBntAlterarProd, jBntExcluirProd);
         Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
         incluindo = false;
     }//GEN-LAST:event_jBtnAlterarActionPerformed
@@ -449,12 +450,12 @@ public class jDlgCjrVenda extends javax.swing.JDialog {
         Util.habilitar(false, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
         Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
         Util.limparCampos(jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
-
+        cjrVendaProdutoControle.setList(new ArrayList());
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         // TODO add your handling code here:
-        Util.habilitar(false, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
+        Util.habilitar(false, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar, jBtnIncluirProd, jBntAlterarProd, jBntExcluirProd);
         Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
         Util.mensagem("A ação foi cancelada!");
         Util.limparCampos(jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
@@ -469,7 +470,7 @@ public class jDlgCjrVenda extends javax.swing.JDialog {
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
-        Util.habilitar(true, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
+        Util.habilitar(true, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar, jBtnIncluirProd, jBntAlterarProd, jBntExcluirProd);
         Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
         Util.limparCampos(jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
         incluindo = true;
@@ -492,7 +493,7 @@ public class jDlgCjrVenda extends javax.swing.JDialog {
             telaVendaProduto.beanView(cjrVendaProduto);
 
             telaVendaProduto.setVisible(true);
-            Util.habilitar(true, jBtnConfirmar, jBtnCancelar);
+            Util.habilitar(true, jBtnConfirmar, jBtnCancelar, jBtnIncluirProd, jBntAlterarProd, jBntExcluirProd);
             Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
         } else {
             Util.mensagem("Erro! Selecione um Registro para poder ser Alterado.");

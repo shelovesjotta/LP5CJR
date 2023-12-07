@@ -129,11 +129,11 @@ public class jDlgCjrUsuarios extends javax.swing.JDialog {
             }
         });
 
-        jLabel1.setText("Nome");
+        jLabel1.setText("Nome Completo");
 
         jLabel2.setText("Código");
 
-        jLabel3.setText("Apelido");
+        jLabel3.setText("Apelido Curto");
 
         jTxtApelido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

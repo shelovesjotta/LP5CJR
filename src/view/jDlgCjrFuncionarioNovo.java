@@ -154,6 +154,7 @@ public class jDlgCjrFuncionarioNovo extends javax.swing.JDialog {
         jDlgCjrFuncionarioNovoIA.setTitle("Inclusão");
         jDlgCjrFuncionarioNovoIA.setIncluindo(true);
         jDlgCjrFuncionarioNovoIA.setVisible(true);
+        jDlgCjrFuncionarioNovoIA.setTelaAnterior(this);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
@@ -165,6 +166,7 @@ public class jDlgCjrFuncionarioNovo extends javax.swing.JDialog {
             jDlgCjrFuncionarioNovoIA.setTitle("Alteração");
             jDlgCjrFuncionarioNovoIA.setIncluindo(false);
             jDlgCjrFuncionarioNovoIA.beanView(cjrFuncionario);
+            jDlgCjrFuncionarioNovoIA.setTelaAnterior(this);
             jDlgCjrFuncionarioNovoIA.setVisible(true);
         } else {
             Util.mensagem("Selecione um Registro para poder ser Alterado.");

@@ -102,7 +102,7 @@ public class jDlgCjrFuncionarioNovoIA extends javax.swing.JDialog {
 
         jLabel1.setText("Código");
 
-        jLabel2.setText("Nome");
+        jLabel2.setText("Nome Completo");
 
         jLabel3.setText("Endereço");
 
@@ -135,7 +135,7 @@ public class jDlgCjrFuncionarioNovoIA extends javax.swing.JDialog {
             }
         });
 
-        jLabel14.setText("Apelido");
+        jLabel14.setText("Apelido Curto");
 
         jLabel18.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel18.setText("Instrumentaliza Vendas");

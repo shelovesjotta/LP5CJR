@@ -156,6 +156,7 @@ public class jDlgCjrProdutoNovo extends javax.swing.JDialog {
         // TODO add your handling code here:
         jDlgCjrProdutoNovoIA.setTitle("Inclusão");
         jDlgCjrProdutoNovoIA.setIncluindo(true);
+        jDlgCjrProdutoNovoIA.setTelaAnterior(this);
         jDlgCjrProdutoNovoIA.setVisible(true);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
@@ -165,7 +166,7 @@ public class jDlgCjrProdutoNovo extends javax.swing.JDialog {
         if (rowSel != -1) {
             jDlgCjrProdutoNovoIA.setTitle("Alteração");
             CjrProduto cjrprodutos = cjrProdutoControle.getBean(rowSel);
-
+            jDlgCjrProdutoNovoIA.setTelaAnterior(this);
             jDlgCjrProdutoNovoIA alterar = new jDlgCjrProdutoNovoIA(null, true);
             alterar.beanView(cjrprodutos);
             
