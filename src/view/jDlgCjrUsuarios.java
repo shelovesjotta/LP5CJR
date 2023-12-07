@@ -402,6 +402,8 @@ public class jDlgCjrUsuarios extends javax.swing.JDialog {
         jDlgCjrUsuariosPesquisa jDlgCjrUsuariosPesquisa = new jDlgCjrUsuariosPesquisa(null, true);
         jDlgCjrUsuariosPesquisa.setTelaAnterior(this);
         jDlgCjrUsuariosPesquisa.setVisible(true);
+        Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido, jFmtCpf, jFmtDatadeNascimento, jPwfSenha, jCboNivel, jChbAtivo, jBtnConfirmar, jBtnIncluir);
+        Util.habilitar(true, jBtnCancelar, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed

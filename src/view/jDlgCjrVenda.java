@@ -430,10 +430,12 @@ public class jDlgCjrVenda extends javax.swing.JDialog {
                 cjrVendaProduto.setCjrVenda(cjrVenda);
                 cjrVendaProduto_DAO.insert(cjrVendaProduto);
             }
+            Util.mensagem("Venda Incluída com Sucesso");
         } else {
             cjrVenda_DAO.update(cjrVenda);
             // Obtém todos os produtos associados a esta venda
             List<CjrVendaProduto> produtosDaVenda = cjrVendaProduto_DAO.listProduto(cjrVenda);
+            Util.mensagem("Venda alterada com Sucesso");
 
             // Remove cada produto associado a esta venda
             for (CjrVendaProduto produto : produtosDaVenda) {
@@ -459,6 +461,7 @@ public class jDlgCjrVenda extends javax.swing.JDialog {
         Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
         Util.mensagem("A ação foi cancelada!");
         Util.limparCampos(jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
+        cjrVendaProdutoControle.setList(new ArrayList());
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
@@ -466,6 +469,9 @@ public class jDlgCjrVenda extends javax.swing.JDialog {
         jDlgCjrVendaPesquisa jDlgCjrVendaPesquisa1 = new jDlgCjrVendaPesquisa(null, true);
         jDlgCjrVendaPesquisa1.setTelaAnterior(this);
         jDlgCjrVendaPesquisa1.setVisible(true);
+        Util.habilitar(false, jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario,jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnIncluir, jBtnIncluirProd, jBntAlterarProd, jBntExcluirProd);
+        Util.habilitar(true, jBtnCancelar, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
+
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed

@@ -553,7 +553,9 @@ public class jDlgCjrCliente extends javax.swing.JDialog {
         jDlgCjrClientePesquisa jDlgCjrClientePesquisa = new jDlgCjrClientePesquisa(null, true);
         jDlgCjrClientePesquisa.setTelaAnterior(this);
         jDlgCjrClientePesquisa.setVisible(true);
-        
+        Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtEmail, jFmtCpf, jFmtTelefone, jFmtDatadeNascimento, jTxtSexo, jTxtEndereco, jTxtCidade, jTxtEstado, jFmtCep, jTxtNumeroCasa, jFmtDatadeCadastro, jTxtSaldoCarteira, jTxtObservacoes, jBtnIncluir, jBtnConfirmar);
+        Util.habilitar(true, jBtnCancelar, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
+
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jFmtTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFmtTelefoneActionPerformed
