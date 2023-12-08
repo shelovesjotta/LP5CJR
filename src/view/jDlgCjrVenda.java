@@ -415,6 +415,7 @@ public class jDlgCjrVenda extends javax.swing.JDialog {
                 Util.mensagem("Deve ser realizada uma pesquisa antes");
             }
        Util.limparCampos(jTxtNumVenda, jFmtData, jCboCliente, jCboFuncionario, jTxtQuantidade, jTxtTotal, jBtnConfirmar, jBtnCancelar);
+       cjrVendaProdutoControle.setList(new ArrayList());
         }
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 

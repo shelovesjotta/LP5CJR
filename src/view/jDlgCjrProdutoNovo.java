@@ -156,21 +156,21 @@ public class jDlgCjrProdutoNovo extends javax.swing.JDialog {
         // TODO add your handling code here:
         jDlgCjrProdutoNovoIA.setTitle("Inclusão");
         jDlgCjrProdutoNovoIA.setIncluindo(true);
-        jDlgCjrProdutoNovoIA.setTelaAnterior(this);
         jDlgCjrProdutoNovoIA.setVisible(true);
+        jDlgCjrProdutoNovoIA.setTelaAnterior(this);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
         // TODO add your handling code here:
         int rowSel = jTable1.getSelectedRow();
         if (rowSel != -1) {
-            jDlgCjrProdutoNovoIA.setTitle("Alteração");
             CjrProduto cjrprodutos = cjrProdutoControle.getBean(rowSel);
-            jDlgCjrProdutoNovoIA.setTelaAnterior(this);
-            jDlgCjrProdutoNovoIA alterar = new jDlgCjrProdutoNovoIA(null, true);
-            alterar.beanView(cjrprodutos);
             
-            alterar.setVisible(true);
+            jDlgCjrProdutoNovoIA.setTitle("Alteração");
+            jDlgCjrProdutoNovoIA.setIncluindo(false);
+            jDlgCjrProdutoNovoIA.beanView(cjrprodutos);
+            jDlgCjrProdutoNovoIA.setTelaAnterior(this);
+            jDlgCjrProdutoNovoIA.setVisible(true);
         } else {
             Util.mensagem("Selecione um Registro para poder ser Alterado.");
         }
@@ -182,7 +182,6 @@ public class jDlgCjrProdutoNovo extends javax.swing.JDialog {
             int sel = jTable1.getSelectedRow();
             cjrProduto = cjrProdutoControle.getBean(sel);
             cjrProduto_DAO.delete(cjrProduto);
-            
             List lista = cjrProduto_DAO.listAll();
             cjrProdutoControle.setList(lista);
             Util.mensagem("Registro excluído com sucesso.");

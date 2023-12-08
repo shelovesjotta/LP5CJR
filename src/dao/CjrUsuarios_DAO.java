@@ -99,13 +99,13 @@ public class CjrUsuarios_DAO extends DAO_Abstract {
 
 
     
-    public Object buscarLogin(String apelido, String senha) {
+    public Object buscarLogin(String cjrapelido, String cjrsenha) {
         CjrUsuarios cjrUsuarios = null;
         session.beginTransaction();
         try {
             Criteria criteria = session.createCriteria(CjrUsuarios.class);
-            criteria.add(Restrictions.eq("mbsApelido", apelido));
-            criteria.add(Restrictions.eq("mbsSenha", senha));
+            criteria.add(Restrictions.eq("cjrApelido", cjrapelido));
+            criteria.add(Restrictions.eq("cjrSenha", cjrsenha));
 
             cjrUsuarios = (CjrUsuarios) criteria.uniqueResult();
         } catch (Exception e) {

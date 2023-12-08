@@ -208,13 +208,13 @@ public class jDlgCjrFuncionarioNovoIA extends javax.swing.JDialog {
         cjrFuncionario = viewBean();
         cjrFuncionario_DAO = new CjrFuncionario_DAO();
         if (incluindo) {
-            setTitle("Inclusão de produtos");
+            setTitle("Inclusão de Funcionarios");
             cjrFuncionario_DAO.insert(cjrFuncionario);
             Util.mensagem("Registro incluído com sucesso.");
             List lista = cjrFuncionario_DAO.listAll();
             jDlgCjrFuncionarioNovo.cjrFuncionarioControle.setList(lista);
         } else {
-            setTitle("Alteração de produtos");
+            setTitle("Alteração de Funcionarios");
             cjrFuncionario_DAO.update(cjrFuncionario);
             List lista = cjrFuncionario_DAO.listAll();
             jDlgCjrFuncionarioNovo.cjrFuncionarioControle.setList(lista);

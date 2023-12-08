@@ -227,11 +227,13 @@ public class jDlgCjrProdutoNovoIA extends javax.swing.JDialog {
         cjrProduto = viewBean();
         cjrProduto_DAO = new CjrProduto_DAO();
         if (incluindo) {
+             setTitle("Inclusão de produtos");
             cjrProduto_DAO.insert(cjrProduto);
+            Util.mensagem("Registro incluído com sucesso.");
             List lista = cjrProduto_DAO.listAll();
             jDlgCjrProdutoNovo.cjrProdutoControle.setList(lista);
-            Util.mensagem("Registro incluído com sucesso.");
         } else {
+            setTitle("Alteração de produtos");
             cjrProduto_DAO.update(cjrProduto);
             List lista = cjrProduto_DAO.listAll();
             jDlgCjrProdutoNovo.cjrProdutoControle.setList(lista);
