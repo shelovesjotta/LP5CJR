@@ -153,8 +153,8 @@ public class jDlgCjrFuncionarioNovo extends javax.swing.JDialog {
         // TODO add your handling code here:
         jDlgCjrFuncionarioNovoIA.setTitle("Inclusão");
         jDlgCjrFuncionarioNovoIA.setIncluindo(true);
-        jDlgCjrFuncionarioNovoIA.setVisible(true);
         jDlgCjrFuncionarioNovoIA.setTelaAnterior(this);
+        jDlgCjrFuncionarioNovoIA.setVisible(true);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed

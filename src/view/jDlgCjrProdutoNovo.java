@@ -156,8 +156,8 @@ public class jDlgCjrProdutoNovo extends javax.swing.JDialog {
         // TODO add your handling code here:
         jDlgCjrProdutoNovoIA.setTitle("Inclusão");
         jDlgCjrProdutoNovoIA.setIncluindo(true);
-        jDlgCjrProdutoNovoIA.setVisible(true);
         jDlgCjrProdutoNovoIA.setTelaAnterior(this);
+        jDlgCjrProdutoNovoIA.setVisible(true);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
