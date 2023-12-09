@@ -416,6 +416,8 @@ public class jDlgCjrUsuarios extends javax.swing.JDialog {
             Util.mensagem("Exclusão cancelada.");
         }
             Util.limparCampos(jTxtCodigo, jTxtNome, jTxtApelido, jFmtCpf, jFmtDatadeNascimento, jPwfSenha, jCboNivel, jChbAtivo);
+            Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido, jFmtCpf, jFmtDatadeNascimento, jPwfSenha, jCboNivel, jChbAtivo, jBtnConfirmar, jBtnCancelar);
+            Util.habilitar(true,jBtnIncluir , jBtnAlterar, jBtnExcluir, jBtnPesquisar);
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jCboNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCboNivelActionPerformed

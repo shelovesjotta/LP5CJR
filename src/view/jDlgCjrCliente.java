@@ -615,6 +615,8 @@ public class jDlgCjrCliente extends javax.swing.JDialog {
         }
 
         Util.limparCampos(jFmtDatadeCadastro, jTxtCodigo, jTxtNome, jTxtEmail, jFmtCpf, jFmtDatadeNascimento, jTxtSexo, jFmtTelefone, jTxtEndereco, jTxtCidade, jTxtEstado, jFmtCep, jTxtNumeroCasa, jTxtSaldoCarteira, jTxtObservacoes);
+        Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtEmail, jFmtCpf, jFmtTelefone, jFmtDatadeNascimento, jTxtSexo, jTxtEndereco, jTxtCidade, jTxtEstado, jFmtCep, jTxtNumeroCasa, jFmtDatadeCadastro, jTxtSaldoCarteira, jTxtObservacoes, jBtnCancelar, jBtnConfirmar);
+        Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     /**
